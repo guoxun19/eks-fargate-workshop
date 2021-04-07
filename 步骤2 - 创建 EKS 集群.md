@@ -73,7 +73,7 @@ eksctl create cluster \
 也可以创建只有运行 Fargate 的集群，不创建 EC2 工作节点组。
 
 ```bash
-eksctl create cluster --name eks-fargate --without-nodegroup --fargate
+eksctl create cluster --name eks-fargate --without-nodegroup --fargate --with-oidc
 ```
 
 
