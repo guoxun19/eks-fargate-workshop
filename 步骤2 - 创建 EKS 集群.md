@@ -147,7 +147,7 @@ ip-192-168-50-173.ap-southeast-1.compute.internal            Ready    <none>   2
 可以看到现在有两个 Fargate 节点在运行，分别承载的是两个 coreDNS Pod。
 
 ```bash
-$  $ kubectl get po --all-namespaces -o wide
+$ kubectl get po --all-namespaces -o wide
 NAMESPACE     NAME                       READY   STATUS    RESTARTS   AGE     IP                NODE                                                         NOMINATED NODE   READINESS GATES
 kube-system   aws-node-mrnwz             1/1     Running   0          3m44s   192.168.50.173    ip-192-168-50-173.ap-southeast-1.compute.internal            <none>           <none>
 kube-system   coredns-85c7d498b7-bbhmt   1/1     Running   0          8m34s   192.168.155.231   fargate-ip-192-168-155-231.ap-southeast-1.compute.internal   <none>           <none>

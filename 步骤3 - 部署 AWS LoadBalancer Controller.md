@@ -123,6 +123,14 @@ helm upgrade -i aws-load-balancer-controller eks/aws-load-balancer-controller \
   -n kube-system
 ```
 
+可以使用以下命令获取 VPC ID
+
+```bash
+aws ec2 describe-vpcs --filter Name=cidr,Values=192.168.0.0/16 | jq -r '.Vpcs[0].VpcId'
+```
+
+
+
 
 
 查看部署状态和日志
