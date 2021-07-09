@@ -21,9 +21,10 @@ AWS ALB 和 NLB 可以和部署在 Fargate 上的 Service/Ingress 进行集成�
 ### 创建 IAM 策略
 
 下载 IAM 策略文件，用于为 AWS Load Balancer Controller 配置 [IRSA](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) 权限 
+注意：以下的 <albc_version> 需要匹配 AWS Load Balancer Controller 的版本，比如 v2.2.0。使用 helm 安装默认会是最新版，也可通过 [helm 参数](https://github.com/aws/eks-charts/tree/master/stable/aws-load-balancer-controller) 配置安装需要的版本。
 
 ```bash
-curl -o iam_policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.1.3/docs/install/iam_policy.json
+curl -o iam_policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/<albc_version>/docs/install/iam_policy.json
 ```
 
 
